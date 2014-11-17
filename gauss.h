@@ -5,9 +5,8 @@
 
 class Gauss : public FuzzySet
 {
-    Q_OBJECT
 public:
-    explicit Gauss(QObject *parent = 0);
+    explicit Gauss();
 
 signals:
 

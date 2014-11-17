@@ -1,6 +1,6 @@
 #include "fuzzyset.h"
 
-FuzzySet::FuzzySet(QObject *parent) :
+FuzzySet::FuzzySet() :
     QObject(parent)
 {
 }

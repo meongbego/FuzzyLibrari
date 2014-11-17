@@ -5,37 +5,27 @@
 
 class Segitiga : public FuzzySet
 {
-    Q_OBJECT
-public:
-    explicit Segitiga(QObject *parent = 0);
-
 private:
-    double tengah;
+    double dMiddle;
+
 public:
-    void setTengahSegitiga(double m)
-    {
-        tengah =m;
+    void setTengah(double l,double r){
+        dMiddle=l;
     }
 
     double getValue(double v)
     {
         if(v<=nKiri)
             return 0;
-        else if(v<nKiri)
-            return (v-nKiri)/(nKanan-nKiri);
-        else if(v==tengah)
-            return 1;
+        else if(v<dMiddle)
+            return (v-nKiri)/(dMiddle-nKiri);
+        else if(v==dMiddle)
+            return 1.0;
         else if(v<nKanan)
-            return (nKanan-v)/(nKanan-tengah);
+            return (nKanan-v)/(nKanan-dMiddle);
         else
             return 0;
     }
-
-
-signals:
-
-public slots:
-
 };
 
 #endif // SEGITIGA_H

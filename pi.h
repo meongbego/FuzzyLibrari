@@ -5,9 +5,8 @@
 
 class Pi : public FuzzySet
 {
-    Q_OBJECT
 public:
-    explicit Pi(QObject *parent = 0);
+    explicit Pi();
 
 signals:
 

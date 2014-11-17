@@ -5,9 +5,8 @@
 
 class LinearNaik : public FuzzySet
 {
-    Q_OBJECT
 public:
-    explicit LinearNaik(QObject *parent = 0);
+    explicit LinearNaik();
 
 private:
 

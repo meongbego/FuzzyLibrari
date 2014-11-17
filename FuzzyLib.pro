@@ -32,4 +32,5 @@ HEADERS += \
     sturun.h \
     snaik.h \
     aPredikat.h \
-    trapesium.h
+    trapesium.h \
+    beta.h

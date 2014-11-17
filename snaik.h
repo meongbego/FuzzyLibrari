@@ -2,19 +2,17 @@
 #define SNAIK_H
 
 #include "fuzzyset.h"
-#include <math.h>
 
 class sNaik : public FuzzySet
 {
-    Q_OBJECT
 public:
-    explicit sNaik(QObject *parent = 0);
+    explicit sNaik();
 
 private:
     double tengahBeta;
 public:
-    void setTengahSnaik(double b){
-        tengahBeta=b;
+    void setTengah(double l,double r){
+        tengahBeta=l;
     }
 
     double getValue(double v){

@@ -5,13 +5,12 @@
 
 class Trapesium : public FuzzySet
 {
-    Q_OBJECT
 public:
-    explicit Trapesium(QObject *parent = 0);
+    explicit Trapesium();
 private:
     double tengahKiri,tengahKanan;
 public:
-    void setTengahTrapesium(double l, double r){
+    void setTengah(double l,double r){
         tengahKiri=l;
         tengahKanan=r;
     }

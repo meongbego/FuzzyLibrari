@@ -1,20 +1,24 @@
 #ifndef FUZZYSET_H
 #define FUZZYSET_H
 
-#include <QObject>
 #include <QDebug>
+#include <math.h>
 
-class FuzzySet : public QObject
+class FuzzySet
 {
-    Q_OBJECT
-public:
-    explicit FuzzySet(QObject *parent = 0);
-
 protected:
     double nKiri;
     double nKanan;
     char dNama;
-    char *sNama=NULL;
+    char *sNama;
+
+public:
+    FuzzySet(){};
+    virtual ~FuzzySet()
+    {
+        delete [] sNama;
+        sNama=NULL;
+    }
 
 private:
 
@@ -24,13 +28,7 @@ public:
         nKanan = r;
     }
 
-    virtual void setTengahSegitiga(double m)=0;
-    virtual void setTengahTrapesium(double l,double r)=0;
-    virtual void setTengahSturun(double b)=0;
-    virtual void setTengahSnaik(double b)=0;
-    virtual void setTengahLonceng(double l)=0;
-    virtual void setTengahPi(double b)=0;
-    virtual void setTengahGauss(double y)=0;
+    virtual void setTengah(double l=0,double r=0)=0;
 
     virtual void setNamaVariabel(char v){
         dNama =v;
@@ -66,5 +64,7 @@ signals:
 public slots:
 
 };
+
+
 
 #endif // FUZZYSET_H

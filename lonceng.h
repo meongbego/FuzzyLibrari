@@ -5,9 +5,9 @@
 
 class Lonceng : public FuzzySet
 {
-    Q_OBJECT
+
 public:
-    explicit Lonceng(QObject *parent = 0);
+    explicit Lonceng();
 
 signals:
 
